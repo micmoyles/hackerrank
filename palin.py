@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-def getSubStrings(s):
+def getSubStrings(s, unique = True):
     startingPoint = 0
     max = len(s) - 1
     retVal = []
@@ -11,6 +11,8 @@ def getSubStrings(s):
                 retVal.append(substr)
         startingPoint+=1
     retVal.append(s[max])
+    if not unique:
+        return retVal
     return set(retVal)
 
 def reverseString(s):
@@ -21,5 +23,5 @@ def reverseString(s):
         reversedString+=letter
     print reversedString
 
-getSubStrings('Teresa')
-reverseString('Michael')
+#getSubStrings('Teresa')
+#reverseString('Michael')
