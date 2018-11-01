@@ -1,6 +1,12 @@
 #!/usr/bin/python 
 
 '''
+An integer P is a whole square if it is a square of some integer
+Q; i.e. if P = Q .
+Write a function:
+def solution(A, B)
+that, given two integers A and B, returns the number of whole
+squares within the interval [A..B] (both ends included).
 '''
 import math
 
