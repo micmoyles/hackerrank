@@ -6,6 +6,8 @@ https://www.hackerrank.com/challenges/special-palindrome-again/problem?h_l=inter
 from palin import getSubStrings
 import math
 
+
+
 def isSpecial(s):
 	'''
 	Special string if 
@@ -35,7 +37,13 @@ def substrCount(s):
 	count = 0
 	substrings = getSubStrings(s,unique = False)
 	for s in substrings:
-		print s, isSpecial(s)
+		#print s, isSpecial(s)
 		if isSpecial(s): count+=1
 	print count
-substrCount('asasd')
+
+f = open('specialPalindromeInput02.txt')
+data = f.read()
+f.close()
+#substrCount(data.strip('\n'))
+substrings = getSubStrings(data.strip('\n'))
+print len(substrings)

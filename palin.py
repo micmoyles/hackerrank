@@ -9,6 +9,8 @@ def getSubStrings(s, unique = True):
             substr = s[startingPoint:i]
             if substr:
                 retVal.append(substr)
+            if len(retVal) > 100000: 
+                return retVal
         startingPoint+=1
     retVal.append(s[max])
     if not unique:
